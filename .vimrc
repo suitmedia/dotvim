@@ -53,10 +53,11 @@ map <C-H> <C-W>h
 map <C-L> <C-W>l
 map ;; :! 
 map ,y "+y
-map ,p "+gP
+map ,p "+gp
 map ,tt :%s/\t/  /g<CR>
-map ,do %ma%xido<ESC>`axiend<ESC>
 map <A-"> ysiw"
+map <A-(> ysiw)
+map <A-)> ysiw)
 map <C-Backspace> db
 
 if version >= 500
