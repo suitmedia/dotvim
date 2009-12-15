@@ -11,20 +11,31 @@ set backspace=indent,eol,start
 set wrap
 set linebreak
 
+" trailling
+set list
+set listchars=tab:>-,trail:.
+
 " search
 set incsearch
 set hlsearch
-set ignorecase
+set smartcase
 
 " cmd history
 set history=1000
 
 " indent
 set softtabstop=2
+"set tabstop=2
+set smarttab
 set shiftwidth=2
 set autoindent
 set smartindent
 set expandtab
+set cindent
+set cpoptions-=J
+
+" window
+set winminheight=0
 
 " other display
 set ch=2
@@ -35,14 +46,19 @@ set et!
 set scrolloff=2
 set ruler
 
+set showmatch
+set matchtime=1
+set backspace=indent,eol,start
+set cursorline
+set hidden
+set ofu=syntaxcomplete#Complete
+
 " bottom
 set showcmd
 set showmode
 
 " I love Monaco
 set guifont=Monaco\ 11
-"set guifont=Monaco\ 9
-
 
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
@@ -59,6 +75,16 @@ map <A-"> ysiw"
 map <A-(> ysiw)
 map <A-)> ysiw)
 map <C-Backspace> db
+map ,f :FuzzyFinderTextMate<CR>
+map ,b :FuzzyFinderBuffer<CR>
+map ,r :ruby finder.rescan!<CR>
+
+" fuzzyfinder
+let g:fuzzy_matching_limit='50'
+let g:fuzzy_ignore='*.log, data/*, data_test/*, data_test/**, tmp/*, coverage/*'
+if filereadable(expand('./vendor'))
+  let g:fuzzy_roots=['app', 'lib', 'config', 'spec', 'test', 'features', 'public']
+endif
 
 if version >= 500
   if !exists("syntax_on")
