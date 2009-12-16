@@ -18,7 +18,7 @@ set listchars=tab:>-,trail:.
 " search
 set incsearch
 set hlsearch
-set smartcase
+set ignorecase
 
 " cmd history
 set history=1000
