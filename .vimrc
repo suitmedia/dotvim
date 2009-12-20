@@ -78,6 +78,15 @@ map <C-Backspace> db
 map ,f :FuzzyFinderTextMate<CR>
 map ,b :FuzzyFinderBuffer<CR>
 map ,r :ruby finder.rescan!<CR>
+map ,jj :! java -jar /usr/local/clojure/clojure.jar %<CR>
+map ,jn :! java -jar /usr/local/clojure/clojure.jar < %<CR>
+
+" finger sugar for xinuc_cucumber.vim
+map ,uff :Cucumber f<CR>
+map ,ufl :Cucumber l<CR>
+map ,ufo :Cucumber o<CR>
+map ,ufa :Cucumber a<CR>
+map ,ufc :Cucumber<CR>
 
 " fuzzyfinder
 let g:fuzzy_matching_limit='50'
