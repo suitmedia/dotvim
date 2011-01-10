@@ -111,6 +111,8 @@ function s:SetUpForNewFiletype(filetype, forceReset)
         call s:MapDelimiters('', '')
     elseif a:filetype ==? "aap"
         call s:MapDelimiters('#', '')
+    elseif a:filetype ==? "ruby"
+        call s:MapDelimiters('#', '')
     elseif a:filetype ==? "abc"
         call s:MapDelimiters('%', '')
     elseif a:filetype ==? "acedb"

@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/xinuc/sandbox/arel-2.0.4'
+let g:netrw_dirhist_2='/media/data/PROJECTNOW/current/siamang'
+let g:netrw_dirhist_3='/media/data/PROJECTNOW/current/zooproperty'
+let g:netrw_dirhist_4='/media/data/PROJECTNOW/current/buzz'
+let g:netrw_dirhist_5='/home/xinuc/.vim'

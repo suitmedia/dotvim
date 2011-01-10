@@ -25,12 +25,12 @@ set history=1000
 
 " indent
 set softtabstop=2
-"set tabstop=2
-set smarttab
+set tabstop=2
+"set smarttab
 set shiftwidth=2
-set autoindent
-set smartindent
-set expandtab
+"set autoindent
+"set smartindent
+"set expandtab
 set cindent
 set cpoptions-=J
 
@@ -46,6 +46,9 @@ set et!
 set scrolloff=2
 set ruler
 
+"guioptions
+set go=aiA
+
 set showmatch
 set matchtime=1
 set backspace=indent,eol,start
@@ -58,7 +61,7 @@ set showcmd
 set showmode
 
 " I love Monaco
-set guifont=Monaco\ 11
+set guifont=Monaco\ 10
 
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
@@ -78,8 +81,11 @@ map <C-Backspace> db
 map ,f :FuzzyFinderTextMate<CR>
 map ,b :FuzzyFinderBuffer<CR>
 map ,r :ruby finder.rescan!<CR>
+map ,t :CommandT<CR>
 map ,jj :! java -jar /usr/local/clojure/clojure.jar %<CR>
 map ,jn :! java -jar /usr/local/clojure/clojure.jar < %<CR>
+
+map ,l :set list!<CR>
 
 " finger sugar for xinuc_cucumber.vim
 map ,uff :Cucumber f<CR>
@@ -95,14 +101,15 @@ if filereadable(expand('./vendor'))
   let g:fuzzy_roots=['app', 'lib', 'config', 'spec', 'test', 'features', 'public']
 endif
 
-if version >= 500
-  if !exists("syntax_on")
-    syntax on
-  endif
-endif
+syntax on
+filetype plugin indent on
 
-if $COLORTERM == 'gnome-terminal'
-    set term=gnome-256color
-    colorscheme slate 
-endif
+""if $COLORTERM == 'gnome-terminal'
+""    set term=gnome-256color
+""   colorscheme slate 
+""endif
 
+let clj_want_gorilla = 1
+let clj_highlight_builtins = 1
+
+set listchars=tab:▸\ ,eol:¬
