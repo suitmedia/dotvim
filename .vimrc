@@ -81,11 +81,12 @@ map <C-Backspace> db
 map ,f :FuzzyFinderTextMate<CR>
 map ,b :FuzzyFinderBuffer<CR>
 map ,r :ruby finder.rescan!<CR>
-map ,t :CommandT<CR>
 map ,jj :! java -jar /usr/local/clojure/clojure.jar %<CR>
 map ,jn :! java -jar /usr/local/clojure/clojure.jar < %<CR>
 
 map ,l :set list!<CR>
+
+nmap <silent> ,t :CommandT<CR>
 
 " finger sugar for xinuc_cucumber.vim
 map ,uff :Cucumber f<CR>
